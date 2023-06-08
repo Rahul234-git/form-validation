@@ -26,10 +26,6 @@ exports.saveData = (req,res) => {
     const dob = req.body.dob;
     const age = req.body.age;
 
-    // if(firstName.match("^[a-zA-Z]*$") && lastName.match("^[a-zA-Z]*$") && email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i)
-    // && gender && (gender === "Male" || gender === "Female" || gender === "Other" || country || state || city
-    // || dob) &&
-    // age >= 14) {
     const dataSave = new userDataHandel({
         firstName: firstName,
         lastName: lastName,
@@ -92,12 +88,6 @@ exports.saveData = (req,res) => {
             console.log(error);
         });
     }
-    // }
-    // else {
-    //     res.json({
-    //         message:"Please fill up valid input "
-    //     })
-    // }
 }
 
 exports.getCountryName = (req, res) => {
